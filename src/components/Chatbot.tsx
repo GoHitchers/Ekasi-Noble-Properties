@@ -29,38 +29,74 @@ const Chatbot: React.FC = () => {
   }, [messages]);
 
   const companyKnowledge: { [key: string]: string } = {
-    'company|about|who are you|what is ekasi':
+    'company|about|who are you|what is ekasi|who is ekasi|tell me about|your company|business':
       "Ekasi Noble Properties is a growing property developer in South Africa. We've overcome challenges to establish ourselves in the market. Our mission is to make history by changing lives and providing everyone an opportunity to own a home. We even assist financially restricted individuals through innovative solutions.",
 
-    'properties|houses|homes|available':
-      "We have several properties available:\n\n1. Ngonyama Lifestyle Estate (North Riding) - R450,000\n2. Nala Estate (Randfontein Greenhills) - R849,000\n3. P&S Noble Apartments (Randfontein Robinpark) - R350,000\n4. P&S Robin Park Estate (Randfontein) - R849,000\n5. Group Buying Opportunity (Randfontein) - R147,000 per investor",
+    'properties|houses|homes|available|what properties|show properties|property list|listings':
+      "We have several properties available:\n\n1. Ngonyama Lifestyle Estate (North Riding) - R450,000\n2. Nala Estate (Randfontein Greenhills) - R849,000\n3. P&S Noble Apartments (Randfontein Robinpark) - R350,000\n4. P&S Robin Park Estate (Randfontein) - R849,000\n5. Group Buying Opportunity (Randfontein) - R147,000 per investor\n\nWould you like more details about any specific property?",
 
-    'rent to own|rent|renting|financing':
-      "We offer a Rent-to-Own program! Start living in your home today while building towards ownership. You can rent initially with a portion going towards your deposit, making homeownership accessible even with limited upfront capital. This innovative solution helps financially restricted individuals achieve their dream of owning property.",
+    'rent to own|rent|renting|financing|payment plan|flexible payment|own a home|buy home':
+      "We offer a Rent-to-Own program! Start living in your home today while building towards ownership. You can rent initially with a portion going towards your deposit, making homeownership accessible even with limited upfront capital. This innovative solution helps financially restricted individuals achieve their dream of owning property.\n\nKey benefits:\n- No credit checks required\n- Flexible payment terms\n- 10, 5, or 15-year repayment plans available",
 
-    'group buying|investment|invest':
-      "Our Group Buying Opportunity allows multiple investors to pool resources and invest together. Starting at just R147,000 per investor in Randfontein. This makes property investment accessible to more people and reduces individual financial burden.",
+    'group buying|investment|invest|stokvel|shares|property investment':
+      "We offer two main investment opportunities:\n\n1. Noble Property Stokvel - 15% ROI after 12 months. Minimum investment: R10,000 + R500 joining fee\n\n2. Group Buying Opportunity - Pool resources with other investors. Starting at R147,000 per investor in Randfontein.\n\nBoth options make property investment accessible to more people!",
 
-    'location|where|areas|randfontein':
+    'location|where|areas|randfontein|greenhills|robinpark|north riding|northriding':
       "We operate in prime locations including:\n- North Riding\n- Randfontein Greenhills\n- Randfontein Robinpark\n- Randfontein General Area\n\nThese are strategic locations in developing areas with high growth potential.",
 
-    'price|cost|affordable|cheap':
-      "Our properties range from R147,000 (group investment) to R849,000. We offer:\n- Affordable apartments from R350,000\n- Houses from R450,000\n- Estate properties up to R849,000\n- Flexible payment options and financing solutions",
+    'price|cost|affordable|cheap|how much|budget|expensive':
+      "Our properties range from R147,000 (group investment) to R950,000. We offer:\n- Affordable apartments from R350,000\n- Houses from R450,000\n- Estate properties up to R849,000\n- Flexible payment options and financing solutions\n\nWhat's your budget range? I can help you find suitable options!",
 
-    'contact|phone|email|reach':
-      "You can contact us:\n- Phone: 079 275 8821\n- Visit our Contact section on the website for a detailed inquiry form\n- We respond to all inquiries within 24 hours",
+    'contact|phone|email|reach|call|get in touch|speak to someone':
+      "You can contact us:\n- Phone: 011 527 1978\n- Mobile: 079 275 8821 / 065 921 3368\n- Email: info@ekasinobleproperties.com\n- Visit our Contact section on the website for a detailed inquiry form\n\nWe respond to all inquiries within 24 hours!",
 
-    'team|staff|who runs':
-      "Our team includes experienced professionals:\n- Siyabonga Shandu - Estate Agent and Co-Founder\n- Mapaseka Majatladi - Sales and Marketing Manager, Co-Founder\n- Dennis Ngonyama - CEO & Founder\n\nWe're dedicated to helping you find your dream home!",
+    'team|staff|who runs|agents|estate agent|sales':
+      "Our team includes experienced professionals:\n- Siyabonga Makhamba - Sales Person (7 years experience)\n- Mapaseka Mojaki - Rental Specialist (6 years experience)\n\nWe're dedicated to helping you find your dream home!",
 
-    'quality|modern|features':
-      "All our developments are built to high standards ensuring:\n- Comfort and modern design\n- Security features\n- Long-term value\n- Quality construction\n- Well-planned communities",
+    'quality|modern|features|amenities|facilities':
+      "All our developments are built to high standards ensuring:\n- Comfort and modern design\n- Security features\n- Long-term value\n- Quality construction\n- Well-planned communities\n- Premium finishes",
 
-    'process|how to buy|steps':
-      "To buy a property with us:\n1. Browse our available properties\n2. Contact us for a viewing\n3. Discuss financing options (traditional mortgage, rent-to-own, or group buying)\n4. Complete the application process\n5. Move into your new home!\n\nWe guide you through every step.",
+    'process|how to buy|steps|buying process|purchase|procedure':
+      "To buy a property with us:\n1. Browse our available properties\n2. Contact us for a viewing\n3. Discuss financing options (traditional mortgage, rent-to-own, or group buying)\n4. Complete the application process\n5. Move into your new home!\n\nWe guide you through every step of the journey.",
 
-    'help|assistance|support':
-      "I can help you with:\n- Information about available properties\n- Rent-to-Own program details\n- Group buying investment opportunities\n- Locations and pricing\n- Contact information\n- Our team and company information\n\nWhat would you like to know more about?"
+    'thaba view|thabakgolo|thaba|game lodge|hartbeespoort|wildlife':
+      "Thaba View Lodge is our boutique game lodge in Hartbeespoort! It's a vibrant home to wild wonders and adventurous souls. You can own a 500m² piece of paradise in a game lodge.\n\nKey features:\n- Wildlife including Zebra, Sable, Nyala, Kudu, and more\n- Investment opportunity at R450,000 per 1ha share\n- Flexible payment plans available\n- Build your dream home or earn rental income",
+
+    'greenlands|greenland|mkh|more key homes|middelvei':
+      "Greenlands Lifestyle Private Estate is located in Randfontein Middelvei 255iQ. It's where luxury meets security in perfect harmony!\n\nFeatures:\n- Unparalleled security\n- Mini shopping center within estate\n- Affordable luxury housing\n- 10-minute drive to schools, shops, and town\n- 300m² land available at R250,000\n\nContact More Key Homes: 010 226 9061",
+
+    'events|workshops|seminars|meetings':
+      "We regularly host property investment workshops and events! Upcoming locations include:\n- Greengate (Beyers Naude)\n- Ngonyama (North Riding)\n- Robin Park (Randfontein)\n- Greenhills\n- Kocksoord\n\nThese events help you learn about investment opportunities and property ownership. Check our Events section for dates!",
+
+    'blacklisted|bad credit|credit check|no credit|poor credit':
+      "Great news! We specialize in helping blacklisted individuals secure properties. Our Rent-to-Own program doesn't require credit checks, making it accessible to those with poor credit history.\n\nWe offer:\n- No credit checks\n- Affordability checks instead\n- Flexible payment terms\n- Expert assistance throughout the process",
+
+    'apartments|flats|1 bedroom|2 bedroom|studio':
+      "We have beautiful apartments available:\n\n1. P&S Noble Apartments (Robinpark) - R350,000\n- 1 bedroom, 1 bathroom\n- 45m²\n- Modern finishes\n\n2. Various apartment options in Kocksoord starting from R250,000\n\nWould you like more details about any of these?",
+
+    'ngonyama|lifestyle estate':
+      "Ngonyama Lifestyle Estate in North Riding is available for R450,000!\n\nFeatures:\n- 2-4 bedrooms available\n- 250m² stand\n- Prime location in North Riding\n- Perfect for families\n- Modern development\n\nInterested in learning more or scheduling a viewing?",
+
+    'nala|nala estate|bhubesi':
+      "Nala Estate in Randfontein Greenhills is available for R950,000!\n\nFeatures:\n- 3 bedrooms, 2 bathrooms\n- 150m² living space\n- Available for sale or rent-to-own\n- Deposit: R299,000 with monthly repayments of R7,000\n- Beautiful modern property\n\nWould you like to schedule a viewing?",
+
+    'deposit|down payment|initial payment|upfront':
+      "Deposit requirements vary by property type:\n\n- 1-bedroom apartments: R120,000+\n- 2-bedroom homes: R250,000+\n- 3-bedroom homes: R300,000+\n- Group buying: R147,000\n- Stokvel investment: R10,000 + R500 fee\n\nWe offer flexible payment plans to make ownership accessible!",
+
+    'faq|questions|common questions|frequently asked':
+      "Common questions we answer:\n\n1. How does Rent-to-Own work?\n2. Can I qualify if I'm blacklisted?\n3. What areas do you have properties in?\n4. How much deposit do I need?\n5. What is the Noble Property Stokvel?\n6. How does group buying work?\n7. When will properties be ready?\n8. Do you offer property management?\n\nWhich topic would you like to know more about?",
+
+    'viewing|see property|visit|tour|inspection':
+      "I'd love to help you schedule a property viewing! To arrange a viewing:\n\n1. Let me know which property interests you\n2. Contact us at 079 275 8821 or 011 527 1978\n3. Or fill out our contact form on the website\n\nOur agents are available Monday-Friday 8:30 AM - 5:00 PM, and Saturday 9:00 AM - 1:00 PM.",
+
+    'security|safe|crime|gated':
+      "Security is a top priority in all our developments! We offer:\n- Gated communities\n- 24/7 security\n- Controlled access\n- CCTV surveillance (in select estates)\n- Well-lit areas\n- Private estate living\n\nYour safety and peace of mind are important to us!",
+
+    'finance|loan|bond|mortgage|bank':
+      "We offer multiple financing options:\n\n1. Traditional mortgage/bond\n2. Rent-to-Own program (no credit checks)\n3. Group buying opportunities\n4. Property investment stokvel\n5. Flexible payment plans\n\nOur team can help you find the best financing solution for your situation!",
+
+    'help|assistance|support|what can you do':
+      "I can help you with:\n- Available properties and pricing\n- Rent-to-Own program details\n- Group buying investment opportunities\n- Locations and areas we operate in\n- Contact information\n- Team and company information\n- Thaba View Lodge details\n- Greenlands Estate information\n- Events and workshops\n- Financing options\n- Viewing arrangements\n\nWhat would you like to know more about?"
   };
 
   const getBotResponse = (userMessage: string): string => {
@@ -73,15 +109,23 @@ const Chatbot: React.FC = () => {
       }
     }
 
-    if (lowerMessage.includes('hi') || lowerMessage.includes('hello') || lowerMessage.includes('hey')) {
+    if (lowerMessage.includes('hi') || lowerMessage.includes('hello') || lowerMessage.includes('hey') || lowerMessage.includes('greet')) {
       return "Hello! Welcome to Ekasi Noble Properties. I can help you with information about our properties, rent-to-own options, group buying opportunities, and more. What would you like to know?";
     }
 
-    if (lowerMessage.includes('thank') || lowerMessage.includes('thanks')) {
-      return "You're welcome! Feel free to ask if you have any other questions about our properties or services.";
+    if (lowerMessage.includes('thank') || lowerMessage.includes('thanks') || lowerMessage.includes('appreciate')) {
+      return "You're welcome! Feel free to ask if you have any other questions about our properties or services. I'm here to help!";
     }
 
-    return "I'd be happy to help! I can provide information about our properties, rent-to-own program, group buying opportunities, locations, pricing, and how to contact us. Could you please be more specific about what you'd like to know?";
+    if (lowerMessage.includes('yes') || lowerMessage.includes('yeah') || lowerMessage.includes('sure') || lowerMessage.includes('ok')) {
+      return "Great! What specific information would you like to know? I can help with:\n- Property details and pricing\n- Financing options\n- Investment opportunities\n- Viewing arrangements\n- Contact information";
+    }
+
+    if (lowerMessage.includes('no') || lowerMessage.includes('not interested')) {
+      return "No problem! If you change your mind or have any questions later, feel free to ask. Is there anything else I can help you with?";
+    }
+
+    return "I'd be happy to help! I can provide information about:\n\n• Available properties and pricing\n• Rent-to-Own program (no credit checks!)\n• Group buying & investment options\n• Thaba View Lodge & Greenlands Estate\n• Locations (North Riding, Randfontein, etc.)\n• Financing solutions\n• Contact information & viewings\n\nWhat would you like to know more about? Try asking about specific topics like 'properties', 'rent to own', 'investment', or 'contact'!";
   };
 
   const handleSendMessage = () => {
